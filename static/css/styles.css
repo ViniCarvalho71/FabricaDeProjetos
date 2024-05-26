@@ -1,0 +1,83 @@
+/* Para ajustar o tamanho do campo pesquisar*/
+.campo-pesquisar {
+    max-width: 200px;
+}
+
+/* Definindo as cores para a navbar e o background */
+.navbar-custom {
+    background-color: #1e2124;
+}
+.bg-custom {
+    background-color: #2b3035;
+}
+
+/* cor do texto */
+.info-banco {
+    color: white;
+}
+
+
+/* Tudo isso ae é pra ajeitar o footer */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    background-color: #343a40; /* Change the background color as needed */
+    color: white; /* Change the text color as needed */
+    text-align: center;
+    padding-top: 20px; /* Vertical padding for the content inside the footer */
+}
+
+/* Estilos específicos para o container "Nome Banco" */
+
+/* Espaço entre os itens na mesma coluna/linha */
+.banco-container .list-unstyled li {
+    margin-bottom: 1em;
+}
+
+/* Mudando o tamanho dos textos */
+.banco-container .list-unstyled li {
+    margin-bottom: 1em;
+    font-size: 16px; /* Tamanho padrão para os itens da lista */
+}
+
+.banco-container .list-unstyled .nome-item {
+    font-size: 12px; /* Tamanho menor para os nomes dos itens */
+    -text-decoration-line: underline;
+    text-decoration-color: rgb(255, 255, 255); /* Defina a cor do sublinhado */
+    font-family: "Helvetica";
+}
+
+.banco-container .list-unstyled .valor-item {
+    font-size: 15px; /* Tamanho maior para os valores dos itens */
+    font-weight: bold;
+    -font-family: "Verdana";
+    -text-decoration-line: underline;
+    -text-decoration-color: rgb(255, 255, 255); /* Defina a cor do sublinhado */
+}
+
+/* Ajustando setinha da lista das bandeiras */
+.setinha-button {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+    margin-left: 5px;
+    margin-right: 5px; /* Espaço entre o texto e a imagem */
+}
+
+.invert-y {
+    transform: scaleY(-1);
+}
+
+
+

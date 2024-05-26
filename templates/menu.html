@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5 mb-5">
+    <h2 class="text-center text-white pt-4 pb-4 info-banco">Informações do banco</h2>
+    <div class="row">
+      <div class="col-md-7 text-center banco-container">
+        <h3 class="text-white">{{nome_banco}}</h3>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-unstyled">
+              <li>
+                <span class="nome-item text-white">Lucro Líquido:</span>
+                <span class="valor-item text-white">R$ {{info['Lucro Líquido']}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <ul class="list-unstyled">
+              <li>
+                <span class="nome-item text-white">Ativo Total:</span>
+                <span class="valor-item text-white">R$ {{info['Ativo Total']}}</span>
+              </li>
+              <li>
+                <span class="nome-item text-white">Patrimônio líquido:</span>
+                <span class="valor-item text-white">R$ {{info['Patrimônio Líquido']}}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-7">
+            <ul class="list-unstyled">
+              <li>
+                <span class="nome-item text-white">Captações:</span>
+                <span class="valor-item text-white">R$ {{info['Captações']}}</span>
+              </li>
+              <li>
+                <span class="nome-item text-white">Carteira de Crédito Classificada:</span>
+                <span class="valor-item text-white">R$ {{info['Carteira de Crédito Classificada (R$)']}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-5 text-center">
+        <div class="bandeira-container">
+          <h3 class="text-white">Nome Bandeira</h3>
+          <div class="interactive-list">
+            {% for bandeira, valores in dicionarios.items() %}
+            <a class="nome-item text-white list-button">
+                {{bandeira}} <img src="{{url_for('static', filename='img/setinhabaixo.png')}}" class="setinha-button">
+              </a>
+              <div class="sub-list">
+              {% for cartao in valores %}
+                <p class = "text-white">Produto: {{cartao['produto']}} | Cartões Ativos: {{cartao['qtdCartoesAtivos']}}</p>
+              {% endfor %}
+              </div>
+
+            {% endfor %}
+          </div>
+          
+          </div>
+          
+          
+        </div>
+      </div>
+  </div>
+  <script>
+    // Inicializa o display para none para todas as sub-listas
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.sub-list').forEach(subList => {
+        subList.style.display = 'none';
+      });
+      
+      document.querySelectorAll('.list-button').forEach(button => {
+        button.addEventListener('click', function() {
+          const subList = this.nextElementSibling;
+          const img = this.querySelector('img');
+    
+          if (subList.style.display === 'none' || subList.style.display === '') {
+            subList.style.display = 'block';
+            img.classList.add('invert-y'); // Adiciona a classe para inverter a imagem
+          } else {
+            subList.style.display = 'none';
+            img.classList.remove('invert-y'); // Remove a classe para restaurar a imagem original
+          }
+        });
+      });
+    });
+    </script>
+{% endblock %}

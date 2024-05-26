@@ -1,0 +1,41 @@
+/* Para ajustar o tamanho do campo pesquisar*/
+.campo-pesquisar {
+    max-width: 200px;
+}
+
+/* Definindo as cores para a navbar e o background */
+
+/* cor do texto */
+.info-banco {
+    color: white;
+}
+
+/* Para centralizar a segunda div */
+.centralizar-conteudo {
+    margin-top: 135px; /* Ajuste a margem superior conforme desejado */
+}
+
+/* Tudo isso ae é pra ajeitar o footer */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    background-color: #343a40; /* Change the background color as needed */
+    color: white; /* Change the text color as needed */
+    text-align: center;
+    padding-top: 20px; /* Vertical padding for the content inside the footer */
+}
+
+.nome_item{
+    
+}
