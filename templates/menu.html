@@ -6,16 +6,16 @@
 
 {% block body %}
 <div class="container mt-5 mb-5">
-    <h2 class="text-center text-white pt-4 pb-4 info-banco">Informações do banco</h2>
+    <h2 class="text-center pt-4 pb-4 search-title" style="color: #8b9aff;">Informações do banco</h2>
     <div class="row">
       <div class="col-md-7 text-center banco-container">
-        <h3 class="text-white">{{nome_banco}}</h3>
+        <h3 class="nome-banco" style="color: #8b9aff;">{{nome_banco}}</h3>
         <div class="row">
           <div class="col-md-12">
             <ul class="list-unstyled">
               <li>
-                <span class="nome-item text-white">Lucro Líquido:</span>
-                <span class="valor-item text-white">R$ {{info['Lucro Líquido']}}</span>
+                <span class="nome-item">Lucro Líquido:</span>
+                <span class="valor-item ">R$ {{info['Lucro Líquido']}}</span>
               </li>
             </ul>
           </div>
@@ -24,24 +24,24 @@
           <div class="col-md-5">
             <ul class="list-unstyled">
               <li>
-                <span class="nome-item text-white">Ativo Total:</span>
-                <span class="valor-item text-white">R$ {{info['Ativo Total']}}</span>
+                <span class="nome-item">Ativo Total:</span>
+                <span class="valor-item ">R$ {{info['Ativo Total']}}</span>
               </li>
               <li>
-                <span class="nome-item text-white">Patrimônio líquido:</span>
-                <span class="valor-item text-white">R$ {{info['Patrimônio Líquido']}}</span>
+                <span class="nome-item">Patrimônio líquido:</span>
+                <span class="valor-item ">R$ {{info['Patrimônio Líquido']}}</span>
               </li>
             </ul>
           </div>
           <div class="col-md-7">
             <ul class="list-unstyled">
               <li>
-                <span class="nome-item text-white">Captações:</span>
-                <span class="valor-item text-white">R$ {{info['Captações']}}</span>
+                <span class="nome-item">Captações:</span>
+                <span class="valor-item ">R$ {{info['Captações']}}</span>
               </li>
               <li>
-                <span class="nome-item text-white">Carteira de Crédito Classificada:</span>
-                <span class="valor-item text-white">R$ {{info['Carteira de Crédito Classificada (R$)']}}</span>
+                <span class="nome-item">Carteira de Crédito Classificada:</span>
+                <span class="valor-item ">R$ {{info['Carteira de Crédito Classificada (R$)']}}</span>
               </li>
             </ul>
           </div>
@@ -50,15 +50,15 @@
       
       <div class="col-md-5 text-center">
         <div class="bandeira-container">
-          <h3 class="text-white">Nome Bandeira</h3>
+          <h3 class="" style="color: #8b9aff;">Nome Bandeira</h3>
           <div class="interactive-list">
             {% for bandeira, valores in dicionarios.items() %}
-            <a class="nome-item text-white list-button">
+            <a class="nome-item  list-button" style="color: #373636;">
                 {{bandeira}} <img src="{{url_for('static', filename='img/setinhabaixo.png')}}" class="setinha-button">
               </a>
               <div class="sub-list">
               {% for cartao in valores %}
-                <p class = "text-white">Produto: {{cartao['produto']}} | Cartões Ativos: {{cartao['qtdCartoesAtivos']}}</p>
+                <p class = "">Produto: {{cartao['produto']}} | Cartões Ativos: {{cartao['qtdCartoesAtivos']}}</p>
               {% endfor %}
               </div>
 
